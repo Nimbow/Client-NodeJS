@@ -1,7 +1,7 @@
 {
   "name": "nimbow-client",
   "version": "1.0.1",
-  "description": "A nodejs wrapper for Nimbow (http://www.nimbow.com/) API to send SMS",
+  "description": "The official nodejs wrapper for Nimbow (http://www.nimbow.com/) API to send SMS",
   "main": "index.js",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha",
