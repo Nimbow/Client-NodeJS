@@ -83,10 +83,10 @@ var NimbowClient = function(apiKey, protocol, testMode, debugMode){
 		});
 	}
 	
-	function sendMessage(message, returnOptions, callback) {
+	function sendMessage(message, additionalOptions, callback) {
 		var path = sendSmsPath + "&" + queryString.stringify(message);
-		if (returnOptions) {
-			path = path +  "&" + queryString.stringify(returnOptions);
+		if (additionalOptions) {
+			path = path +  "&" + queryString.stringify(additionalOptions);
 		}
 		
 		sendRequest(path, "GET", function(error, apiResponse) {
@@ -106,13 +106,13 @@ var NimbowClient = function(apiKey, protocol, testMode, debugMode){
 		}
 	}
 	
-	function sendTextMessage(from, to, text, returnOptions, callback) {
-		sendMessage({from: from, to: to, text: text}, returnOptions, callback)
+	function sendTextMessage(from, to, text, additionalOptions, callback) {
+		sendMessage({from: from, to: to, text: text}, additionalOptions, callback)
 	}
 	
-	function sendUnicodeTextMessage(from, to, text, returnOptions, callback) {
+	function sendUnicodeTextMessage(from, to, text, additionalOptions, callback) {
 		var unicodeDigits = stringToUnicodeCodePoints(text);
-		sendMessage({from: from, to: to, text: unicodeDigits, type: "unicode"}, returnOptions, callback)
+		sendMessage({from: from, to: to, text: unicodeDigits, type: "unicode"}, additionalOptions, callback)
 	}
 	
 	function stringToUnicodeCodePoints(text) {

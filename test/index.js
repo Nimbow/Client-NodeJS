@@ -62,7 +62,7 @@ describe("nimbow-client sendTextMessage", function(){
 		});
 	});
 	
-	it("should execute get request and pass return option paramters", function(done){
+	it("should execute get request and pass additional paramters", function(done){
 		var expected = { StatusCode: 0 };
 		var response = new PassThrough();
 		response.write(JSON.stringify(expected));
@@ -89,7 +89,7 @@ describe("nimbow-client sendTextMessage", function(){
 		});
 	});
 	
-	it("should execute get request and pass return option paramters when false", function(done){
+	it("should execute get request and pass additional paramters when false", function(done){
 		var expected = { StatusCode: 0 };
 		var response = new PassThrough();
 		response.write(JSON.stringify(expected));
@@ -116,7 +116,7 @@ describe("nimbow-client sendTextMessage", function(){
 		});
 	});
 	
-	it("should execute get request and only pass return option paramters which are defined", function(done){
+	it("should execute get request and only pass additional paramters which are defined", function(done){
 		var expected = { StatusCode: 0 };
 		var response = new PassThrough();
 		response.write(JSON.stringify(expected));
@@ -143,7 +143,7 @@ describe("nimbow-client sendTextMessage", function(){
 		});
 	});
 	
-	it("should execute get request and not pass return parameters if null", function(done){
+	it("should execute get request and not pass additional parameters if null", function(done){
 		var expected = { StatusCode: 0 };
 		var response = new PassThrough();
 		response.write(JSON.stringify(expected));
