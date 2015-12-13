@@ -1,0 +1,23 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Run mocha",
+			"type": "node",
+			"program": "./node_modules/mocha/bin/_mocha",
+			"stopOnEntry": false,
+			"args": ["test/index.js"],
+			"cwd": ".", 
+			"runtimeExecutable": null,
+			"env": {
+				"NODE_ENV": "development"
+			}
+		},
+		{
+			"name": "Attach",
+			"type": "node",
+			"request": "attach",
+			"port": 5858
+		}
+	]
+}
